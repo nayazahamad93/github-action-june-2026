@@ -8,7 +8,7 @@ jobs:
         steps: 
              
             - name : checkout the repository
-              uses: actions/checkoutv7
+              uses: actions/checkout@v7
     
             - name: list the file
               run: ls -lart
