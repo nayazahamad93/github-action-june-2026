@@ -15,7 +15,7 @@ jobs:
               with:
                 node-version: 20
 
-            - name: Install Dependanc`ies
+            - name: Install Dependancies
               run: npm ci
 
             - name: start the app
