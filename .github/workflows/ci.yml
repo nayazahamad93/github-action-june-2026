@@ -27,7 +27,4 @@ jobs:
             - name: Check Health
               run: curl -I "http://localhost:3000" || exit 1
 
-            - name: Install node js
-              uses: ./.github/actions/greet.yml
-              with:
-                node-version: 20
+            
