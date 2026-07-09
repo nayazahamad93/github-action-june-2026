@@ -1,8 +1,8 @@
-const express = require('express');
+const http = require('http');
 
 const PORT = process.env.PORT || 3000;
 
-const app = express();
+const app = http();
 
 app.get('/', (req, res) => {
   res.type('html').send('<h1 style="text-align: center; margin-top: 20%;">Welcome</h1>');
