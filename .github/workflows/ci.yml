@@ -15,6 +15,9 @@ jobs:
               with:
                 node-version: 20
 
+            - name: Install Dependanc`ies
+              run: npm ci
+
             - name: start the app
               run: npm start &
 
@@ -24,4 +27,7 @@ jobs:
             - name: Check Health
               run: curl -I "http://localhost:3000" || exit 1
 
-            
+            - name: Install node js
+              uses: ./.github/actions/greet.yml
+              with:
+                node-version: 20
