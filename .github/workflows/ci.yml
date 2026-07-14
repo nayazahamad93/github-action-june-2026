@@ -8,22 +8,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
 
       - name: Install Dependencies
         run: npm ci
 
-      - name: Start the app
+      - name: Start App
         run: npm start &
 
-      - name: Wait for the application to boot
+      - name: Wait
         run: sleep 10
 
-      - name: Check Health
+      - name: Health Check
         run: curl -I http://localhost:3000
